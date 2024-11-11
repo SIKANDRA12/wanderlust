@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+     <!-- to make object field key value pair-->
+    <div class="row mt-3">
+     <div class="col-8 offset-2">
+        <h3>Add new list item</h3>
+        <!-- enctype is middleware that define for accessing data in diffrent format like multi-form  -->
+        <form method="POST" action="/listings" novalidate class="needs-validation g-3" enctype="multipart/form-data">
+            <div  class="mb-3">
+                <label for="title" class="form-label" >Title</label>
+                <input 
+                  name="listing[title]" 
+                  placeholder="Add a catchy title" 
+                  type="text" 
+                  class="form-control" 
+                  required 
+                />
+                <div class="valid-feedback">
+                  Title Looks good!
+                </div> 
+            </div>
+
+            <div  class="mb-3">
+                <label for="description" class="form-label" >Description</label>
+                <textarea name="listing[description]" placeholder="Write your description" type="text" class="form-control" required ></textarea>
+                <div class="valid-feedback">
+                   please enter short description
+                </div>
+            </div><br />
+
+            <!-- <div  class="mb-3">
+                <label for="image" class="form-label"> Image</label>
+                <input name="listing[image]" placeholder="Enter image URL/LINK" type="text" class="form-control" required >
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    please insert your image link.
+                </div>
+            </div> -->
+            <div  class="mb-3">
+                <label for="image" class="form-label">Upload Listing Image</label>
+                <input name="listing[image]"  type="file" class="form-control" />
+                required
+            </div>
+            
+            <br />
+
+            <div class="row ">
+                <div  class="mb-3 col-md-4">
+                    <label for="price" class="form-label" >Price</label>
+                    <input name="listing[price]" placeholder="1200" class="form-control"  >
+                    <div  class="invalid-feedback">
+                        Enter your price.
+                    </div>
+                </div><br />
+    
+                <div  class="mb-3 col-md-8">
+                    <label for="country" class="form-label" >Country</label>
+                    <input name="listing[country]" placeholder="India" type="text" class="form-control" required > 
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Enter your country name.
+                    </div>
+                </div><br />
+            </div>
+            
+
+            <div  class="mb-3">
+                <label for="location" class="form-label" >Location</label>
+                <input name="listing[location]" placeholder="bihar aurangabad" type="text" class="form-control" required >
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Enter your location.
+                </div>
+            </div>
+           
+           <button class="btn btn-dark add-btn"> Add</button>
+          
+           <br /><br />
+        </form>
+     </div>
+    </div>
+</body>
