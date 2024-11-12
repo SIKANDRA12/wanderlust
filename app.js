@@ -47,7 +47,7 @@ const store = MongoStore.create(
         mongoUrl: dbUrl,
         //When working with sensitive session data it is recommended to use encryption
         crypto:{
-            secret:  process.env.SECRET,
+            secret:  process.env.SECRET
         },
         //Interval (in seconds) between session updates.
         touchAfter: 24 * 3600,
