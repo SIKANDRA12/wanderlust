@@ -1,0 +1,17 @@
+<%- include("../includes/header.ejs") %>
+
+<h1>Reservation Successful!</h1>
+
+<h2><%= listing.title %> - <%= listing.location %></h2>
+
+<p>Price Breakdown:</p>
+<ul>
+    <li>₹<%= listing.price %> x <%= nights %> nights = ₹<%= subtotal %></li>
+    <li>Service Fee = ₹<%= serviceFee %></li>
+</ul>
+
+<h3>Total: ₹<%= total %></h3>
+
+<a href="/listings">Back to Listings</a>
+
+<%- include("../includes/footer.ejs") %>
