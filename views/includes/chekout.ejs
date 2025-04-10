@@ -6,6 +6,7 @@
       border-radius: 12px;
       width: 320px;
       font-family: Arial, sans-serif;
+      margin-top: 20px;
     }
 
     .checkout-container h2 {
@@ -69,8 +70,8 @@
   </style>
 
   <div class="checkout-container">
-    <h2>₹14,980 <span>night</span></h2>
-    <p>₹14,980 per night</p>
+    <h2>&#8377;<%= Number(listing.price).toLocaleString("en-IN") %> <span>night</span></h2>
+    <p>₹<%= Number(listing.price).toLocaleString("en-IN") %> per night</p>
 
     <form action="/reserve" method="POST">
       <div class="form-group">
@@ -90,11 +91,12 @@
       <p class="note">You won't be charged yet</p>
 
       <div class="price-breakdown">
-        <p>₹14,980 x 5 nights <span>₹74,900</span></p>
-        <p>Airbnb service fee <span>₹10,574</span></p>
+        <p>₹<%= Number(listing.price).toLocaleString("en-IN") %> x <%= nights %> nights <span>₹<%= Number(subtotal).toLocaleString("en-IN") %></span></p>
+        <p>Service fee <span>₹<%= Number(serviceFee).toLocaleString("en-IN") %></span></p>
         <hr />
-        <p>Total before taxes <span>₹85,474</span></p>
+        <p>Total before taxes <span>₹<%= Number(total).toLocaleString("en-IN") %></span></p>
       </div>
     </form>
   </div>
 </div>
+
