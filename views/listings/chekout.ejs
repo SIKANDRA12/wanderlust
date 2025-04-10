@@ -1,0 +1,41 @@
+<div style="border: 1px solid #ccc; padding: 20px; border-radius: 12px; width: 320px; font-family: Arial, sans-serif;">
+    <h2 style="margin-bottom: 5px;">₹<%= pricePerNight %> <span style="font-weight: normal;">night</span></h2>
+    <p style="color: gray; margin-bottom: 20px;">₹<%= pricePerNight %> per night</p>
+  
+    <form action="/reserve" method="POST">
+      <label>CHECK-IN</label>
+      <input type="date" name="checkin" value="<%= checkin %>" required style="width: 100%; margin-bottom: 10px;">
+  
+      <label>CHECKOUT</label>
+      <input type="date" name="checkout" value="<%= checkout %>" required style="width: 100%; margin-bottom: 10px;">
+  
+      <label>GUESTS</label>
+      <input type="number" name="guests" min="1" value="<%= guests %>" required style="width: 100%; margin-bottom: 20px;">
+  
+      <button type="submit" style="width: 100%; padding: 10px; background-color: #ff385c; color: white; border: none; border-radius: 8px; font-size: 16px;">
+        Reserve
+      </button>
+    </form>
+  
+    <p style="text-align: center; margin-top: 10px; color: gray;">You won't be charged yet</p>
+  
+    <hr style="margin: 20px 0;">
+  
+    <div style="display: flex; justify-content: space-between;">
+      <span>₹<%= pricePerNight %> x <%= nights %> nights</span>
+      <span>₹<%= pricePerNight * nights %></span>
+    </div>
+  
+    <div style="display: flex; justify-content: space-between;">
+      <span>Airbnb service fee</span>
+      <span>₹<%= serviceFee %></span>
+    </div>
+  
+    <hr style="margin: 20px 0;">
+  
+    <div style="display: flex; justify-content: space-between; font-weight: bold;">
+      <span>Total before taxes</span>
+      <span>₹<%= totalPrice %></span>
+    </div>
+  </div>
+  

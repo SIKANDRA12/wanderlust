@@ -18,7 +18,10 @@
                 <p class="card-text"><%= listing.description %> </p>
                 <p class="card-text">&#8377;<%= Number(listing.price).toLocaleString("en-IN") %><i>&nbsp;&nbsp;+18% GST</i> </p>
                 <p class="card-text"><%= listing.country %></p>
-                <p class="card-text"><%= listing.location %></p>
+                <div>
+                    <p class="card-text"><%= listing.location %></p>
+                    <%- include("./checkout.ejs") %>
+                </div>
             </div>
         </div>
         <% if (currUser && currUser._id && listing.owner && listing.owner._id && currUser._id.equals(listing.owner._id)) { %>
