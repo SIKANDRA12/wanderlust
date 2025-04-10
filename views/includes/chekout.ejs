@@ -70,7 +70,10 @@
   </style>
 
   <div class="checkout-container">
-    <h2>&#8377;<%= Number(listing.price).toLocaleString("en-IN") %> <span>night</span></h2>
+    <h2>
+      &#8377;<%= Number(listing.price).toLocaleString("en-IN") %>
+      <span>night</span>
+    </h2>
     <p>₹<%= Number(listing.price).toLocaleString("en-IN") %> per night</p>
 
     <form action="/reserve" method="POST">
@@ -91,12 +94,20 @@
       <p class="note">You won't be charged yet</p>
 
       <div class="price-breakdown">
-        <p>₹<%= Number(listing.price).toLocaleString("en-IN") %> x <%= nights %> nights <span>₹<%= Number(subtotal).toLocaleString("en-IN") %></span></p>
-        <p>Service fee <span>₹<%= Number(serviceFee).toLocaleString("en-IN") %></span></p>
+        <p>
+          ₹<%= Number(listing.price).toLocaleString("en-IN") %> x <%= nights %>
+          nights <span>₹<%= Number(subtotal).toLocaleString("en-IN") %></span>
+        </p>
+        <p>
+          Service fee
+          <span>₹<%= Number(serviceFee).toLocaleString("en-IN") %></span>
+        </p>
         <hr />
-        <p>Total before taxes <span>₹<%= Number(total).toLocaleString("en-IN") %></span></p>
+        <p>
+          Total before taxes
+          <span>₹<%= Number(total).toLocaleString("en-IN") %></span>
+        </p>
       </div>
     </form>
   </div>
 </div>
-
