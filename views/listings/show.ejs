@@ -35,8 +35,8 @@
       </div>
     </div>
   </div>
-  <% if (currUser && currUser._id && listing.owner && listing.owner._id &&
-  currUser._id.equals(listing.owner._id)) { %>
+  <% if (user && user._id && listing.owner && listing.owner._id &&
+  user._id.equals(listing.owner._id)) { %>
   <div class="btns">
     <a
       href="/listings/<%= listing._id %>/edit"
@@ -52,7 +52,7 @@
   <% } %>
 
   <div class="col-8 offset-3 mb-3">
-    <% if(currUser){ %>
+    <% if(user){ %>
     <hr />
     <h4>Leave a Review</h4>
     <form
