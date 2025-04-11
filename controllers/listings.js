@@ -27,18 +27,18 @@ module.exports.showListing = async (req, res) => {
   }
 
   // Static calculation for now
-  const nights = 5; // later you can get this from query or form input
-  const subtotal = listing.price * nights;
-  const serviceFee = Math.round(subtotal * 0.15); // 15% fee
-  const total = subtotal + serviceFee;
+  // const nights = 5; // later you can get this from query or form input
+  // const subtotal = listing.price * nights;
+  // const serviceFee = Math.round(subtotal * 0.15); // 15% fee
+  // const total = subtotal + serviceFee;
 
   res.render("./listings/show.ejs", {
     listing,
     reviews: listing.reviews,
-    nights,
-    subtotal,
-    serviceFee,
-    total,
+    // nights,
+    // subtotal,
+    // serviceFee,
+    // total,
   });
 };
 

@@ -59,7 +59,9 @@ module.exports = router;
 //     // }
 //     // res.render("./listings/new.ejs");
 // });
-
+// cloudnary seceret and api key
+//13LuzB4FoBfUgHPu0h7SONjkc8I
+//816613789235279
 // //show route
 // router.get( wrapAsync(listingController.showListing));
 

@@ -98,7 +98,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req, res, next) => {
     res.locals.successMsg = req.flash("success");
     res.locals.error = req.flash("error");
-    res.locals.currUser = req.user;
+    res.locals.user = req.user;
     next();
 });
 
@@ -106,7 +106,7 @@ app.use((req, res, next) => {
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/",userRouter);
-app.use('/', reserveRoutes);
+// app.use('/', reserveRoutes);
 
 
 // to search err from all route

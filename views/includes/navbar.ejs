@@ -59,12 +59,12 @@
       </div>
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Homena</a>
-        <% if(!currUser) {%>
+        <% if(!user) {%>
         <a class="nav-link active" aria-current="page" href="/signup"
           ><b>signup</b></a
         >
         <a class="nav-link" href="/login"><b>Login</b></a>
-        <% } %><% if(currUser) {%>
+        <% } %><% if(user) {%>
         <a class="nav-link" href="/logout"><b>Logout</b></a>
         <% } %>
       </div>
